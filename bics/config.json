@@ -1,0 +1,23 @@
+{
+  "essential": {
+    "graphic_data_url": "data.csv",
+    "colour_palette": ["#0075A3", "#266D4A", "#234D70", "#601552"],
+    "sourceText": ["Office for National Statistics – Business Impact of Coronavirus Survey"],
+    "numberFormat":".0%",
+    "xAxisScale": [0, 1],
+    "barHeight": {
+      "sm": 40,
+      "md": 30,
+      "lg": 30
+    },
+    "margin":{
+      "sm":{"top":0,"right":0,"bottom":0,"left":155},
+      "md":{"top":0,"right":0,"bottom":0,"left":200},
+      "lg":{"top":0,"right":0,"bottom":0,"left":200}
+    }
+  },
+  "optional": {
+    "mobileBreakpoint": 414,
+    "middleBreakpoint": 600
+  }
+}

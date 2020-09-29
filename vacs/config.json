@@ -1,0 +1,67 @@
+{
+  "essential": {
+    "graphic_data_url": "regions.csv",
+    "dateFormat": "%d/%m/%Y",
+
+    "colour_palette": [{
+        "key": "2019",
+        "colour": "#003c57"
+      },
+      {
+        "key": "2020",
+        "colour": "#36ADD9"
+      }
+    ],
+
+    "categorySort": ["All industries","Healthcare and social care","Education","Wholesale and retail","Catering and hospitality"],
+    "sourceText": ["Adzuna"],
+    "xAxisLabel": "",
+    "yAxisLabel": "Regions and Countries",
+    "yAxisScale": "seecode"
+  },
+  "optional": {
+    "margin": {
+      "sm": {
+        "top": 10,
+        "right": 23,
+        "bottom": 45,
+        "left": 40
+      },
+      "md": {
+        "top": 10,
+        "right": 23,
+        "bottom": 50,
+        "left": 40
+      },
+      "lg": {
+        "top": 10,
+        "right": 23,
+        "bottom": 45,
+        "left": 24
+      }
+    },
+    "chart_every":{
+      "sm": 1,
+      "md": 2,
+      "lg": 3
+    },
+    "aspectRatio": {
+      "sm": [16, 8],
+      "md": [16, 8],
+      "lg": [16, 14]
+    },
+    "legendHeight":{
+      "sm": 45,
+      "md": 30,
+      "lg": 30
+    },
+
+    "mobileBreakpoint": 480,
+    "middleBreakpoint": 670,
+    "x_ticks_every": {
+      "sm": 2,
+      "md": 2,
+      "lg": 2
+    }
+  }
+}

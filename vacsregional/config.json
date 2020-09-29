@@ -1,0 +1,95 @@
+{
+    "essential" : {
+            "graphic_data_url": "data.csv",
+
+            "dateFormat":"%d/%m/%Y",
+
+            "legendLabels" : ["Blue", "Green", "Red"],
+            "legendStyle": "line",
+            "directLabeling" : false,
+            "directLabelingAdjust" : {
+              "Blue": {"x": 0, "y": 0},
+              "Green": {"x": 0, "y": 7},
+              "Red": {"x": 0, "y": -7}
+            },
+            "colour_palette": {
+              "Blue": "#274796",
+              "Green": "green",
+              "Red": "#E73F40"
+            },
+
+            "sourceText":["Adzuna"],
+            "sourceURL":["http://www.ons.gov.uk"],
+            "draggable": false,
+           "annotationsChart" : [
+              {
+                "xVal": "2020-09-24T00:00:00.000Z",
+                "yVal": 56,
+                "path": "",
+                "text": "All regions  average",
+                "textOffset": [0,2]
+              },
+
+              {
+                "xVal": "2020-09-04T00:00:00.000Z",
+                "yVal": 100,
+                "path": "",
+                "text": "2019 average = 100",
+                "textOffset": [0,-5]
+              },
+
+              {
+                "xVal": "2011-06-01T00:00:00.000Z",
+                "yVal": 60,
+                "path": "",
+                "text": "",
+                "textOffset": [0,0]
+              }
+            ],
+
+            "wordwrap":[8,100,10],
+            "annoAlign": ["start","end","end"],
+            "annotationBullet" : [],
+
+            "circles" : false,
+            "annotationCXCY":[
+                ["Jan-93","68.4"],
+                ["Jan-08","73"]
+            ],
+            "annotationColour": ["green"],
+
+            "yAxisLabel":"Index, 2019 average = 100",
+            "yAxisScale":[0,150],
+            "yAxisBreak": false,
+            "yAxisBreak_sm_md_lg": [65,65,65]
+    },
+
+    "optional" : {
+            "margin_sm": [30, 80, 25, 40],
+            "margin_md": [30, 80, 25, 40],
+            "margin_lg": [30, 80, 25, 40],
+
+            "aspectRatio_sm" : [1,1],
+            "aspectRatio_md" : [2,1],
+            "aspectRatio_lg" : [2,1],
+
+            "mobileBreakpoint" : 350,
+
+            "xAxisTextFormat_sm_md_lg" : ["%b-%Y", "%b-%Y", "%b-%Y"],
+
+            "x_num_ticks_sm_md_lg" : [5,5,10],
+            "y_num_ticks_sm_md_lg" : [5,5,5],
+
+            "lineMarkers" : false,
+
+            "vertical_line" : false,
+            "annotateLineX1_Y1_X2_Y2" : [ [["11/03/2020", "50"],["11/03/2020", "0"]] ],
+
+            "annotateRect" : false,
+            "annotateRectX_Y" : [ [["Jan-94", 200],["Jan-96", 0]], [["Jul-04", 180],["Jul-06", 40]] ],
+            "lineColor_opcty" : [["#ABCDEF", 0.2], ["#888", 0.4]],
+
+            "centre_line" : true,
+            "centre_line_value" : 100
+    }
+}

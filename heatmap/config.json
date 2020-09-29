@@ -1,0 +1,23 @@
+{
+    "essential" : {
+            "graphic_data_url": ["data_mobile.csv", "data_desktop.csv"],
+            "sourceText":["Faster indicators, Office for National Statistics"],
+            "varcolour": ["#fff","#660000","#990000","#c76152","#e7aba4","#f7f7f7","#99bfc0","#4e858a","#004e57"],
+			      "direction":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            "section": [5,5,5,5,1],
+            "sectionLabels":[["VAT diffusion index SA","Quarter-on-Quarter","Turnover"],["VAT diffusion index NSA","Quarter-on-year ago","Turnover"],["VAT diffusion index SA","Month-on-Month","Turnover"],["VAT diffusion index NSA","Month-on-year ago","Turnover"],["","",""]],
+            "numberBreaks":7,
+            "breaks":[-17,-10,-4,-1.5,-0.5,0.5,1.5,4,7],
+            "brickRatio_S_M_L":[0.5,0.5,1],
+            "unittext":"Average number of marriages: ",
+            "tooltipFormat":",.1f"
+    },
+    "optional" : {
+            "margin_sm": [5, 60, 30, 180],
+            "margin_md": [5, 60, 30, 205],
+            "margin_lg": [5, 60, 50, 205],
+
+            "mobileBreakpoint" : 450,
+            "tabletBreakpoint" : 600
+    }
+}

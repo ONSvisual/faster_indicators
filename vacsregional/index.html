@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <title>Adzuna reginal chart</title>
+
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <link rel="stylesheet" href="../lib/globalStyle.css" />
+    <link href="./css/chosen.css" rel="stylesheet" /> <!-- for chosen button -->
+
+    <style type="text/css">
+      h6 {
+         font-size: 16px;
+         margin: 16px 0 8px 0;
+         font-weight: 700;
+         color:#323132;
+      }
+
+      .btn--primary {
+        background-color: #0F8243;
+        color: #fff;
+      }
+      .btn {
+        font-family: "Open Sans", Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        display: inline-block;
+        width: auto;
+        cursor: pointer;
+        padding: 6px 16px 10px 16px;
+        border: 0 none;
+        text-align: center;
+        -webkit-appearance: none;
+        transition: background-color 0.25s ease-out;
+        line-height: 32px;
+      }
+      a {
+        text-decoration: underline;
+        word-wrap: break-word;
+      }
+      /* .footer-link {
+        color: #206095 !important;
+      } */
+
+      ul, ol {
+        margin: 0px 0;
+        padding-left: 16px;
+      }
+
+      li {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        margin: 0px 0;
+        padding: 6px 0 10px 16px;
+      }
+	  .revealhilight{
+		  font-size: 18px;
+		  font-weight: bold;
+		  color: #0075A3;}
+
+    select {
+        position: relative;
+        height: 40px;
+        background: white;
+        border: none;
+        width: 134px;
+        ;
+      }
+
+      .select select {
+        /* font-size: 1.1em; */
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        background: transparent;
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        outline: none;
+        padding-right: 35px;
+        padding-left: 4px;
+        border: 2px solid #206095;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+      }
+
+      .borderbox {
+        border: 2px solid #1b5f97;
+        /* height: 40px;*/
+        width: 100%;
+        margin-top:25px;
+        /* display: inline-block; */
+      }
+.button {
+            overflow: visible;
+            text-transform: none;
+            font: inherit;
+        }
+.btn--primary {
+            background-color: #206095 !important;
+        }
+.btn {
+            position: relative;
+            padding: 10px 15px;
+            margin: 0 0 20px;
+            line-height: normal;
+            color: #fff;
+            font-size: 1.3em !important;
+            border-radius: 0px;
+            display: inline-block;
+            text-rendering: optimizeLegibility;
+            transition: background-color .2s ease-in, color .2s ease-in;
+        }
+
+label {
+            display: block;
+            width: 100%;
+            padding: 0;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: inherit;
+            color: #206095;
+            border: 0;
+            margin: 25px 0 0 0;
+        }
+
+        .chosen-container{margin-top:10px;}
+
+
+.sexbutton{
+  float: left;
+  margin-top:10px;
+  margin-right: 5px;
+  background-color: #fff;
+  text-align: center;
+  color:#666;
+  font-size: 18px;
+  font-weight: bold;
+  width: 120px;
+  height: 40px;
+  padding-top: 6px;
+  border: 1px solid grey;
+  box-sizing: border-box;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.sexbutton:hover{
+  background-color: #003C57;
+  border: 1px solid #003C57;
+  color:#fff;
+}
+
+.sexbutton:focus{
+  border: 2px solid orange;
+}
+
+.sexbutton-selected{
+  float: left;
+  margin-top:10px;
+  background-color: #1b5f97;
+  margin-right: 5px;
+  text-align: center;
+  color:#fff;
+  font-size: 18px;
+  font-weight: bold;
+  width: 120px;
+  height: 40px;
+  padding-top: 6px;
+  border: 1px solid #1b5f97;
+  box-sizing: border-box;
+  cursor: pointer;
+  cursor: hand;
+
+}
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+
+	<div id="inputform" style="clear: both;">
+    <!--new select box-->
+
+   <legend>Select a region or country to compare with the all regions average</legend>
+
+    <div style="margin-bottom:15px; max-width300px;" >
+        <select name="select" id= "yearbox" class="chosen-select">
+          <option selected="" disabled="">Select a region or country</option>
+
+
+          <option value="England">England</option>
+          <option value="Wales">Wales</option>
+          <option value="Scotland">Scotland</option>
+          <option value="NorthernIreland">Northern Ireland</option>
+          <option value="NorthEast">North East</option>
+          <option value="NorthWest">North West</option>
+          <option value="YorkshireandTheHumber">Yorkshire and The Humber</option>
+          <option value="EastMidlands">East Midlands</option>
+          <option value="WestMidlands">West Midlands</option>
+          <option value="EastofEngland">East of England</option>
+          <option value="London">London</option>
+          <option value="SouthEast">South East</option>
+          <option value="SouthWest">South West</option>
+
+
+        <!--  <option value="2017">2017</option> -->
+        </select>
+    </div>
+
+
+    </div>
+
+    <p style="margin-bottom:20px;">
+      <span style="font-weight:bold; font-size: 22px; color:#adadad;"> &#9473; </span> All regions &nbsp; &nbsp;
+      <span style="font-weight:bold; font-size: 24px; color:#234D70;"> &#9473; </span> All regions average &nbsp; &nbsp;
+      <span style="font-weight:bold; font-size: 22px; color:#D2376D;">&#9473; </span><span id="yourselectedcountry">Your selected region</span>
+    </p>
+
+    <div id="graphic">
+
+    	<img src="fallback.png" alt="[Chart]" />
+    </div>
+
+    <h6 id="source"></h6>
+
+<!--   <div id="footer">
+     <h6>Download this chart</h6>
+     <a class="btn btn--primary" href="download.png" download>Image</a>
+     <a class="btn btn--primary" href="data.xlsx" target="_blank">.xls</a>
+     <a class="btn btn--primary" href="data.csv" target="_blank">.csv</a>
+   </div> -->
+
+   		<script src="https://cdn.ons.gov.uk/vendor/d3/4.2.7/d3.min.js" type="text/javascript"></script>
+   		<script src="../lib/modernizr.svg.min.js" type="text/javascript"></script>
+   		<script src="https://cdn.ons.gov.uk/vendor/pym/1.3.2/pym.min.js" type="text/javascript"></script>
+   		<script src="../lib/d3v4jetpack.js" type="text/javascript"></script>
+		  <script src="../lib/swoopy-drag-d3v4.js" type="text/javascript"></script>
+      <script src="../lib/saveSvgAsPng.js" type="text/javascript"></script>
+      <script src="https://cdn.ons.gov.uk/vendor/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+      <script src="../lib/chosen.jquery.js"></script>
+      <script src="../lib/chosen.order.jquery.min.js"></script>
+      <!-- <script src="../lib/footer.js"></script> -->
+
+   <script>
+
+		var graphic = d3.select('#graphic');
+		var pymChild = null;
+
+    $(".chosen-select").chosen({
+      allow_single_deselect: true,
+      disable_search: true
+    })
+    // .on('change', function(e) {
+    //
+    //   selectedYear = $('#yearbox').val()
+    // });
+
+    var sexfilter = "A";
+
+    d3.select(".sba").on("click",function(){
+      d3.selectAll(".sexbutton").classed('sexbutton-selected', false);
+      d3.select(this).classed('sexbutton-selected', true);
+
+      //display All value background lines
+      d3.selectAll(".backlines").attr("display","none");
+      d3.selectAll(".Abacklines").attr("display","block");
+      //sort foreground lines
+      d3.selectAll(".frontlines").attr("display","none");
+      d3.selectAll(".Afrontlines").attr("display","block");
+      //display All value England and Wales lines
+      d3.selectAll(".ewlines").attr("display","none");
+      d3.select(".Aewlines").attr("display","block");
+
+      d3.select("#yourselectedcountry").text("Your selected country")
+
+      d3.selectAll(".frontlines").style("opacity",0)
+
+      sexfilter = "A";
+
+      d3.select(".annotations").selectAll("text").attr("transform","translate(0,0)");
+
+    })
+
+
+    d3.select(".sbm").on("click",function(){
+      d3.selectAll(".sexbutton").classed('sexbutton-selected', false);
+      d3.select(this).classed('sexbutton-selected', true);
+      //display All value background lines
+      d3.selectAll(".backlines").attr("display","none");
+      d3.selectAll(".Mbacklines").attr("display","block");
+      //sort foreground lines
+      d3.selectAll(".frontlines").attr("display","none");
+      d3.selectAll(".Mfrontlines").attr("display","block");
+      //display All value England and Wales lines
+      d3.selectAll(".ewlines").attr("display","none");
+      d3.select(".Mewlines").attr("display","block");
+
+      d3.select("#yourselectedcountry").text("Your selected country")
+
+      d3.selectAll(".frontlines").style("opacity",0)
+
+      d3.select(".annotations").selectAll("text").attr("transform","translate(0,40)");
+
+      sexfilter = "M";
+    })
+
+    d3.select(".sbf").on("click",function(){
+      d3.selectAll(".sexbutton").classed('sexbutton-selected', false);
+      d3.select(this).classed('sexbutton-selected', true);
+      //display All value background lines
+      d3.selectAll(".backlines").attr("display","none");
+      d3.selectAll(".Fbacklines").attr("display","block");
+      //sort foreground lines
+      d3.selectAll(".frontlines").attr("display","none");
+      d3.selectAll(".Ffrontlines").attr("display","block");
+      //display All value England and Wales lines
+      d3.selectAll(".ewlines").attr("display","none");
+      d3.select(".Fewlines").attr("display","block");
+
+      d3.selectAll(".frontlines").style("opacity",0)
+
+      d3.select("#yourselectedcountry").text("Your selected country")
+
+      d3.select(".annotations").selectAll("text").attr("transform","translate(0,0)");
+
+      sexfilter = "F";
+    })
+
+		function drawGraphic(width) {
+		   var threshold_md = 788;
+		   var threshold_sm = dvc.optional.mobileBreakpoint;
+
+		  	//set variables for chart dimensions dependent on width of #graphic
+		    if (parseInt(graphic.style("width")) < threshold_sm) {
+												var margin = {	top: 	dvc.optional.margin_sm[0],
+																right: 	dvc.optional.margin_sm[1],
+																bottom: dvc.optional.margin_sm[2],
+																left: 	dvc.optional.margin_sm[3]
+															};
+												var size = 0;	// used for margin_centre and x_ticks
+												var chart_width = parseInt(graphic.style("width")) - margin.left - margin.right;
+												var height = Math.ceil((chart_width * dvc.optional.aspectRatio_sm[1]) / dvc.optional.aspectRatio_sm[0]) - margin.top - margin.bottom;
+		    									}
+
+			else if (parseInt(graphic.style("width")) < threshold_md){
+		        								var margin = {	top: 	dvc.optional.margin_md[0],
+																right: 	dvc.optional.margin_md[1],
+																bottom: dvc.optional.margin_md[2],
+																left: 	dvc.optional.margin_md[3]
+															};
+												var size = 1;
+												var chart_width = parseInt(graphic.style("width")) - margin.left - margin.right;
+		            							var height = Math.ceil((chart_width * dvc.optional.aspectRatio_md[1]) / dvc.optional.aspectRatio_md[0]) - margin.top - margin.bottom;
+												}
+
+		  	 else {
+		        								var margin = {	top: 	dvc.optional.margin_lg[0],
+																right: 	dvc.optional.margin_lg[1],
+																bottom: dvc.optional.margin_lg[2],
+																left: 	dvc.optional.margin_lg[3]
+															};
+												var size = 2;
+												var chart_width = parseInt(graphic.style("width")) - margin.left - margin.right;
+		            							var height = Math.ceil((chart_width * dvc.optional.aspectRatio_lg[1]) / dvc.optional.aspectRatio_lg[0]) - margin.top - margin.bottom;
+												}
+
+
+		    // clear out existing graphics
+		      graphic.selectAll("*").remove();
+
+		    var x = d3.scaleTime()
+		        .range([0, chart_width]);
+
+		    var y = d3.scaleLinear()
+		        .range([height, 0]);
+
+		    x.domain(d3.extent(graphic_data, function(d) { return d.date; }));
+
+		    var xAxis = d3.axisBottom(x)
+		        .tickFormat(function(d,i) {
+		            //specify date format for x axis depending on #graphic width
+		            if (parseInt(graphic.style("width")) <= threshold_sm) {
+		                var fmt = d3.timeFormat(dvc.optional.xAxisTextFormat_sm_md_lg[0]);
+						//console.log("S "+fmt(d));
+		                return '\u2019' + fmt(d);
+		            } else if (parseInt(graphic.style("width")) <= threshold_md){
+		                var fmt = d3.timeFormat(dvc.optional.xAxisTextFormat_sm_md_lg[1]);
+						//console.log("M "+fmt(d));
+		                return  fmt(d);
+		            } else {
+						//console.log(dvc.optional.xAxisTextFormat_sm_md_lg[2] + ",  " + d);
+		                var fmt = d3.timeFormat(dvc.optional.xAxisTextFormat_sm_md_lg[2]);
+						//console.log("L "+fmt(d));
+		                return fmt(d);
+		            }
+		        })
+				.tickPadding(5)
+
+	        //specify number of ticks on x axis and whether 1st and last data point labels are included
+	        if(parseInt(graphic.style("width"))<threshold_sm){
+	            xAxis.tickValues(x.ticks(dvc.optional.x_num_ticks_sm_md_lg[0]).concat( x.domain() ));
+	        } else if (parseInt(graphic.style("width")) <= threshold_md){
+				xAxis.tickValues(x.ticks(dvc.optional.x_num_ticks_sm_md_lg[1])/*.concat( x.domain() )*/);
+			} else {
+	            xAxis.tickValues(x.ticks(dvc.optional.x_num_ticks_sm_md_lg[2])/*.concat( x.domain() )*/);
+	        }
+
+		    var yAxis = d3.axisLeft(y);
+
+
+			//specify number or ticks on y axis
+			if (parseInt(graphic.style("width")) <= threshold_sm) {
+				yAxis.ticks(dvc.optional.y_num_ticks_sm_md_lg[0])
+			 } else if (parseInt(graphic.style("width")) <= threshold_md){
+				yAxis.ticks(dvc.optional.y_num_ticks_sm_md_lg[1])
+			 } else {
+				yAxis.ticks(dvc.optional.y_num_ticks_sm_md_lg[2])
+			 }
+
+		    //gridlines
+		    var y_axis_grid = function() { return yAxis; }
+
+        var counter;
+
+
+		    var line = d3.line()
+            .defined(function(d){return d.amt !== '0';}) // nobody can tell me what this line actually does
+            .curve(d3.curveLinear)
+		        .x(function(d) { return x(d.date); })
+		        .y(function(d) { return y(d.amt); });
+
+		    // parse data into columns
+		    var lines = {};
+		    for (var column in graphic_data[0]) {
+		        if (column == 'date') continue;
+		        lines[column] = graphic_data.map(function(d) {
+		            return {
+		                'date': d.date,
+		                'amt': d[column]
+		            };
+		        });
+		    }
+
+
+
+
+
+
+        // do some code to overwrite blanks with the last known point
+       keys=d3.keys(lines)
+       for(i=0;i<keys.length;i++){
+         // console.log(lines[keys[i]])
+         lines[keys[i]].forEach(function(d,j){
+           if(d.amt!=""){
+             counter = j;
+           }else{
+             d.date=lines[keys[i]][counter].date
+             d.amt=lines[keys[i]][counter].amt
+           }
+
+         })
+
+       }
+
+
+		  	//y domain calculations	: zero to intelligent max choice, or intelligent min and max choice,  or interval chosen manually
+	   		if (dvc.essential.yAxisScale == "auto_zero_max"){
+			   var yDomain = [
+								0,
+								d3.max(d3.entries(lines), function(c) {
+									return d3.max(c.value, function(v) {
+										var n = v.amt;
+										return Math.ceil(n);
+									});
+								})
+							 ];
+			} else if (dvc.essential.yAxisScale == "auto_min_max"){
+				var yDomain = [
+								d3.min(d3.entries(lines), function(c) {
+									return d3.min(c.value, function(v) {
+										var n = v.amt;
+										return Math.floor(n);
+									});
+								}),
+
+								d3.max(d3.entries(lines), function(c) {
+									return d3.max(c.value, function(v) {
+										var n = v.amt;
+										return Math.ceil(n);
+									});
+								})
+					 		];
+			} else {
+			   var yDomain = dvc.essential.yAxisScale;
+		    }
+
+		    y.domain(yDomain);
+
+				//console.log(chart_width +" , "+ height);
+				//console.log(chart_width + margin.left + margin.right +" , "+ (height + margin.top + margin.bottom));
+
+		    //create svg for chart
+		 var legend = d3.select('#graphic').append('svg')
+						//.attr("width", chart_width + margin.left + margin.right)
+						//.attr("height", margin.bottom +330) //height + margin.top + margin.bottom +30)
+						.append("g")
+						.attr("id", "legend");
+
+
+				//var svg = d3.select('#graphic').append('svg')
+				var svg = d3.select('svg')
+							.attr("id","chart")
+							.style("background-color","#fff")
+							.attr("width", chart_width + margin.left + margin.right)
+							.attr("height", height + margin.top + margin.bottom )  //+30)
+							.append("g")
+							.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+					svg.append("rect")
+						.style("fill", "#fff")
+						.attr("width", chart_width)
+						.attr("height", height);
+
+				    svg.append('g')
+				        .attr('class', 'y axis')
+				        .call(yAxis);
+
+				    svg.append('g')
+				        .attr('class', 'y grid')
+				        .call(y_axis_grid()
+				            .tickSize(-chart_width, 0, 0)
+				            .tickFormat('')
+				        );
+
+					//y axis label
+						 svg.append("text")
+							//.attr('class', 'unit')
+							.attr('transform','translate(' + -margin.left + ',-15)') // " + eval(-margin.top + (lineNo+1)*20) + "
+							.attr("font-size","14px")
+ 							.attr("fill","#666")
+							.text(function(d,i) { return dvc.essential.yAxisLabel});
+
+                //customannotations
+              svg.append("text")
+               .attr('x',x(d3.timeParse(dvc.essential.dateFormat)("01/12/2016")))
+               .attr("y",y(46))
+               .attr("font-size","14px")
+               .attr("fill","#666")
+               .attr("text-anchor","end")
+               .text("");
+               svg.append("text")
+                .attr('x',x(d3.timeParse(dvc.essential.dateFormat)("01/12/2016")))
+                .attr("y",y(46)+18)
+                .attr("font-size","14px")
+                .attr("fill","#666")
+                .attr("text-anchor","end")
+                .text("");
+
+                svg.append("text")
+                 .attr('x',x(d3.timeParse(dvc.essential.dateFormat)("15/04/2020")))
+                 .attr("y",y(50))
+                 .attr("font-size","14px")
+                 .attr("fill","#666")
+                 .attr("text-anchor","end")
+                 .text("");
+                  svg.append("text")
+                   .attr('x',x(d3.timeParse(dvc.essential.dateFormat)("15/04/2020")))
+                   .attr("y",y(50)+18)
+                   .attr("font-size","14px")
+                   .attr("fill","#666")
+                   .attr("text-anchor","end")
+                   .text("");
+
+
+
+
+					//create x axis, if y axis doesn't start at 0 drop x axis accordingly
+					svg.append('g')
+				        .attr('class', 'x axis')
+				        .attr('transform', function(d){
+				        			if(yDomain[0] != 0){
+										return 'translate(0,' + (height + 30) + ')'
+									} else {
+										return 'translate(0,' + height  + ')'
+									}
+							})
+				        .call(xAxis);
+
+				 d3.select(".x").select("path").style("stroke", "#666")
+
+				//create icon to symbolise break in y axis if required
+				if(yDomain[0] > 0 && dvc.essential.yAxisBreak == true){
+					var paths = svg.append("defs")
+								.append("g")
+								.attr("id","icon")
+								.append("g");
+
+							paths.append("polyline")
+								 .attr("points", "2.881,9.54 7.94,5.061 12.341,9.54 17.77,5.061")
+								 .attr("stroke", "#666")
+								 .attr("fill", "none")
+							paths.append("polyline")
+								.attr("points", "2.881,14.54 7.94,10.061 12.341,14.54 17.77,10.061")
+								.attr("stroke", "#666")
+								.attr("fill", "none");
+
+						//specify position of icon
+						svg.append("g").attr("id","iconpath")
+								.attr("transform","translate(-10,3)")
+								.append("use")
+								.attr("xlink:href","#icon")
+								.attr("x", x(x.domain()[0]))
+								.attr("y", function(){
+									if (parseInt(graphic.style("width")) < threshold_sm) {
+										return y(dvc.essential.yAxisBreak_sm_md_lg[0])
+									} else if (parseInt(graphic.style("width")) < threshold_md){
+										return y(dvc.essential.yAxisBreak_sm_md_lg[1])
+									} else {
+										return y(dvc.essential.yAxisBreak_sm_md_lg[2])
+									}
+								});
+				}
+
+        d3.selectAll(".tick").select("text").attr("font-size","19px");
+				//create centre line if required
+				if (dvc.optional.centre_line == true){
+					svg.append("line")
+						//.attr("id","centreline")
+						.attr("stroke", "#adadad")
+						.attr("stroke-width", 1)
+						.attr('y1',y(dvc.optional.centre_line_value))
+						.attr('y2',y(dvc.optional.centre_line_value))
+						.attr('x1',0)
+						.attr('x2',chart_width);
+				} else if(yDomain[0] <0){
+					svg.append("line")
+						//.attr("id","centreline")
+						.attr("stroke", "#CCC")
+						.attr("stroke-width", 3)
+						.attr('y1',y(0))
+						.attr('y2',y(0))
+						.attr('x1',0)
+						.attr('x2',chart_width);
+				}
+
+
+				//create vertical line if required
+				if (dvc.optional.vertical_line == true){
+
+					dvc.optional.annotateLineX1_Y1_X2_Y2.forEach(function(d,i) {
+
+					svg.append("line")
+						.attr('x1',x(d3.timeParse(dvc.essential.dateFormat)(dvc.optional.annotateLineX1_Y1_X2_Y2[i][0][0])))
+						.attr('x2',x(d3.timeParse(dvc.essential.dateFormat)(dvc.optional.annotateLineX1_Y1_X2_Y2[i][1][0])))
+						.attr('y1',y(dvc.optional.annotateLineX1_Y1_X2_Y2[i][0][1]))
+						.attr('y2',y(dvc.optional.annotateLineX1_Y1_X2_Y2[i][1][1]))
+						.style('stroke', '#555')
+						.style('stroke-width', 2);
+    					//.style('stroke-dasharray', '5 5');   ,dash px,space px
+
+
+					})
+				}
+
+				//create rectangle
+				if (dvc.optional.annotateRect == true){
+
+					dvc.optional.annotateRectX_Y.forEach(function(d,i) {
+
+					svg.append("rect")
+						.attr('x',x(d3.timeParse(dvc.essential.dateFormat)(dvc.optional.annotateRectX_Y[i][0][0]))  )
+						.attr('y',y(dvc.optional.annotateRectX_Y[i][0][1]))
+						.attr('height',y( dvc.optional.annotateRectX_Y[i][1][1] ) - y(dvc.optional.annotateRectX_Y[i][0][1])  )
+						.attr('width',x(d3.timeParse(dvc.essential.dateFormat)(dvc.optional.annotateRectX_Y[i][1][0])) - x(d3.timeParse(dvc.essential.dateFormat)(dvc.optional.annotateRectX_Y[i][0][0])))
+						.style('fill', dvc.optional.lineColor_opcty[i][0] )
+						.style('stroke-width', 2)
+						.style('opacity', dvc.optional.lineColor_opcty[i][1] );
+
+					})
+				}
+
+
+				//create background lines
+			    svg.append('g').selectAll('path')
+			        .data(d3.entries(lines).filter(line.defined()))
+			        .enter()
+			        .append('path')
+			        .attr('class',function(d,i){return d.key.charAt(0) + 'backlines backlines'})
+						//.attr("class",function(d,i){return "lines " + d.key})
+						.style("stroke","#e7e7e7") //function(d){ return dvc.essential.colour_palette[d.key]; })
+						//.attr("stroke",function(d,i){return "hsl(" + i*5 + ",40%,60%)"})
+						.style("stroke-width", 2)
+						.style("stroke-linecap", 'round')
+						.style("stroke-linejoin", 'round')
+			            .attr('d', function(d) {
+			                return line(d.value);
+			            });
+
+				//create top layer lines
+			    svg.append('g').selectAll('path')
+			        .data(d3.entries(lines).filter(line.defined()))
+			        .enter()
+			        .append('path')
+			        .attr('class',function(d,i){return d.key.charAt(0) + 'frontlines frontlines frontlines' +d.key + " " +d.key})
+						.style("stroke","#D2376D")
+						.style("fill", 'none')
+						.style("opacity",0)
+						.style("stroke-width", 2)
+						.style("stroke-linecap", 'round')
+						.style("stroke-linejoin", 'round')
+			            .attr('d', function(d) {
+			                return line(d.value);
+			            });
+
+                  //create E&W line
+          			    svg.append('g').selectAll('path')
+          			        .data(d3.entries(lines).filter(line.defined()))
+          			        .enter()
+          			        .append('path')
+          						.attr('class',function(d,i){
+                        if (d.key=="AAllRegions"){
+                          return d.key.charAt(0) + 'ewlines ewlines'}
+                        else if(d.key=="MAllRegions"){
+                          return d.key.charAt(0) + 'ewlines ewlines'}
+                        else if(d.key=="FAllRegions"){
+                          return d.key.charAt(0) + 'ewlines ewlines'}
+                        else {return "ewlines"}
+                        })
+          						.style("stroke","#055477") //function(d){ return dvc.essential.colour_palette[d.key]; })
+          						.style("opacity",1)
+          						.style("stroke-width", 2)
+          						.style("stroke-linecap", 'round')
+          						.style("stroke-linejoin", 'round')
+          			            .attr('d', function(d) {
+          			                return line(d.value);
+          			            });
+
+                      //display All value England and Wales lines
+                      d3.selectAll(".ewlines").attr("display","none");
+                      d3.select(".Aewlines").attr("display","block");
+
+                      //display All value background lines
+                      d3.selectAll(".backlines").attr("display","none");
+                      d3.selectAll(".Abacklines").attr("display","block");
+
+
+
+
+
+
+
+
+				//pull in totals
+        d3.select(".chosen-drop").on("touchend",function(){
+          useryear = sexfilter + d3.select("#yearbox").property("value");
+          //d3.select("#yourselectedcountry").text(useryear.substr(1))
+
+          //get last object in array
+          finalobject = graphic_data.length;
+          //creat data of just that last object
+          showthisvalue1 = graphic_data[finalobject-1];
+          //now get user's year
+          showthisvalue2 = showthisvalue1[useryear];
+
+          revealline(useryear);
+        })
+
+				d3.select(".chosen-drop").on("click",function(){
+					useryear = sexfilter + d3.select("#yearbox").property("value");
+          //d3.select("#yourselectedcountry").text(useryear.substr(1))
+					//marriagestotal(useryear);
+
+					//get last object in array
+					finalobject = graphic_data.length;
+					//creat data of just that last object
+					showthisvalue1 = graphic_data[finalobject-1];
+					//now get user's year
+					showthisvalue2 = showthisvalue1[useryear];
+
+					revealline(useryear);
+				})
+
+
+
+				function hoverreveal(hoverline){
+
+					hoverline2=hoverline.substr(6)
+					hoverline3=hoverline.substr(7)
+					//add year to reveal text
+					d3.select("#yeardisplay").text(hoverline3)
+
+					//get last object in array
+					finalobject = graphic_data.length;
+					//creat data of just that last object
+					showthisvalue1 = graphic_data[finalobject-1];
+					//now get user's year
+					showthisvalue2 = showthisvalue1[hoverline2];
+
+
+					//add percent to reveal text
+					useryear=hoverline2;
+					marriagestotal(useryear);
+
+
+				}
+
+
+
+				var numberformat =  d3.format(",d");
+
+				function revealline(useryear){
+
+					d3.selectAll(".frontlines")
+						.transition()
+						.duration(1000)
+						.style("opacity",0)
+					d3.select("." + useryear)
+						.transition()
+						.duration(1000)
+						.style("opacity",1)
+
+				}
+
+				//pull in totals
+				function marriagestotal(useryear){
+				//	console.log(useryear)
+
+					//yourtotal = graphic_data_marriages.filter(function(d) {return d.date == useryear});
+					//console.log(yourtotal);
+					//yourtotal2 = yourtotal[0].value;
+
+					//console.log(yourtotal2);
+					}
+
+
+				// add markers
+				if (parseInt(graphic.style("width")) > threshold_sm && dvc.optional.lineMarkers == true){
+					for (var column in graphic_data[0]) {
+								if (column == 'date') continue;
+													 svg.append("g")
+														.selectAll("circles")
+														.data(lines[column]) // raw data
+														.enter()
+														.append('circle')
+														.style('fill', '#fff')
+														.style('stroke', function(d){ return dvc.essential.colour_palette[column]; })
+														.style('stroke-width', 2)
+														.attr("cx", function(d){
+																					return x(d.date);
+																				})
+														.attr("cy", function(d){
+																					return y(d.amt);
+																				})
+														.attr("r", function(d){if(d[column]!=0){return 3}else{return 0}});
+													}
+												} // ends if
+
+        // circle annotations
+            if(dvc.essential.circles==true){
+              dvc.essential.annotationCXCY.forEach(function(d,i){
+                svg.append("circle")
+                  .attr("cx",x(d3.timeParse(dvc.essential.dateFormat)(dvc.essential.annotationCXCY[i][0])))
+                  .attr("cy",y(dvc.essential.annotationCXCY[i][1]))
+                  .attr("r",6)
+                  .attr("fill",dvc.essential.annotationColour)
+
+                svg.append("text")
+                .attr("x",x(d3.timeParse(dvc.essential.dateFormat)(dvc.essential.annotationCXCY[i][0]))-20)
+                .attr("y",y(dvc.essential.annotationCXCY[i][1])-15)
+                .text(dvc.essential.annotationCXCY[i][0])
+              })
+            } // ends if
+
+			writeAnnotation();
+
+			//create link to source
+      d3.select('#source')
+        .text('Source: ' + dvc.essential.sourceText);
+
+	function writeAnnotation(){
+
+		if (parseInt(graphic.style("width")) < 200) {
+
+			dvc.essential.annotationBullet.forEach(function(d,i) {
+
+					d3.select("#keypoints").append("svg")
+						.attr("width","15px")
+						.attr("height","15px")
+						.attr("class","circles")
+						.append("circle")
+						.attr("class", "annocirc" + (i))
+						.attr("r", "2")
+						.attr('cy',"9px")
+						.attr("cx", "10px");
+
+					d3.select("#keypoints")
+						.append("p")
+						.style("font-size","12px")
+						.style("font-weight",400)
+						.text(dvc.essential.annotationBullet[i]);
+
+					})// end foreach
+
+			}
+			else {
+
+			annotations = dvc.essential.annotationsChart;
+
+			// For elements with time series
+			for(i=0; i < annotations.length  ;i++) {
+				annotations[i].xVal = new Date(annotations[i].xVal);
+			}
+
+			 var swoopy = d3.swoopyDrag()
+							.x(function(d){ return x(d.xVal) })
+							.y(function(d){ return y(d.yVal) })
+							.draggable(dvc.essential.draggable)
+							.annotations(annotations);
+
+
+			var swoopySel = svg.append('g').attr("class","annotations").call(swoopy); // Expected number, "translate()". error for each annotation
+
+			svg.append('marker')
+				.attr('id', 'arrow')
+				.attr('viewBox', '-10 -10 20 20')
+				.attr('markerWidth', 20)
+				.attr('markerHeight', 20)
+				.attr('orient', 'auto')
+				.append('path')
+				.attr('d', 'M-6.75,-6.75 L 0,0 L -6.75,6.75')
+				.attr('fill','#808080');
+
+			swoopySel.selectAll('path').attr('marker-end', 'url(#arrow)');
+
+
+			d3.selectAll(".annotations path")
+				.style("stroke","#808080")
+				.attr("fill","none");
+
+			swoopySel.selectAll('text')
+    			.attr("font-size",  "14px")
+    			.attr("font-weight", "bold")
+          .attr("fill","#234D70")
+          .attr("class",function(d,i){return "annotext" +i})
+				.each(function(d,i){
+					d3.select(this)
+						.text('')                        //clear existing text
+						.tspans(d3.wordwrap(d.text, dvc.essential.wordwrap[i])) //wrap after xx char
+					});
+
+          d3.select(".annotext0").style("font-weight","bold").style("fill","#234D70");
+
+
+			swoopySel.selectAll('text')
+				.each(function(d,i){
+					d3.select(this).selectAll('tspan')
+					.attr("text-anchor",dvc.essential.annoAlign[i]);
+					});
+				} // end else ...
+
+			return;
+
+}// end function writeAnnotation()
+
+// always create a legend on mobile. when not on mobile, only create a legend if not using direct line labeling.
+var onMobile = parseInt(graphic.style("width")) < dvc.optional.mobileBreakpoint;
+if (!dvc.essential.directLabeling || onMobile) {
+	createLegend();
+}
+else {
+  createLineLabels();
+}
+
+function createLegend(){//
+//
+//							var prevX= 0;
+//							var prevY= 0;
+//							lineNo = 0;
+//							var lineNoOld = 0;
+//
+//						dvc.essential.legendLabels.forEach(function(d, i) { console.log(dvc.essential.colour_palette[d])
+//
+//							// draw legend text based on content of var legendLabels ...
+//							var_group= d3.select("#legend").append("g")
+//
+//							var_group.append("rect")
+//								.attr("class","rect" + i)
+//								.attr("fill", dvc.essential.colour_palette[d])
+//								.attr("x", 0)
+//								.attr("y", 0)
+//								.attr("width", function(d){
+//									if(dvc.essential.legendStyle=="rect"){
+//										return 15;
+//									} else {
+//										return 20;
+//									}
+//								})
+//								.attr("height", function(d){
+//									if(dvc.essential.legendStyle=="rect"){
+//										return 15;
+//									} else {
+//										return 3;
+//									}
+//								})
+//
+//							var_group.append("text")
+//								.text(dvc.essential.legendLabels[i])
+//								.attr("class","legend" + i)
+//								.attr("text-anchor", "start")
+//								.style("font-size", "12px")
+//								.style("fill", "#666")
+//								.attr('y',15)
+//								.attr('x',0);
+//
+//
+//							d3.selectAll(".legend" + (i))
+//								.each(calcPosition);
+//
+//							function calcPosition() {
+//
+//
+//							var BBox = this.getBBox()
+//
+//
+//							//prevY =BBox.width
+//								d3.select(".legend" + (i))
+//										.attr("y",function(d){
+//													if((prevX+BBox.width +50)>parseInt(graphic.style("width")) ){
+//														lineNoOld = lineNo;
+//														lineNo=lineNo + 1;
+//														prevX = 0;
+//													}
+//												return eval((lineNo*20) + 20);
+//										})
+//										.attr("x",function(d){ return prevX+25;})
+//
+//
+//								d3.select(".rect" + (i))
+//										.attr("y",function(d){
+//
+//												if((prevX+BBox.width +50)>parseInt(graphic.style("width")) ){
+//													lineNoOld = lineNo;
+//													lineNo=lineNo + 1;
+//													prevX = 0;
+//												}
+//
+//												if(dvc.essential.legendStyle=="rect"){
+//													return eval((lineNo*20)+5);
+//												} else {
+//													return eval((lineNo*20)+12);
+//
+//												}
+//										})
+//										.attr("x",function(d){ return prevX; })
+//
+//								prevX = prevX + BBox.width +50
+//
+//
+//
+//							}; // end function calcPosition()
+//						});	// end foreach
+			}// end function createLegend()
+
+
+      function createLineLabels(){
+
+        for (var column in graphic_data[0]) {
+          if (column == 'date') continue;
+
+          svg.append("text")
+            // place the line labels to the right of the lines and add label adjustment from config
+            .attr("transform", function(d) {
+              var xcoord = x(graphic_data[graphic_data.length-1]["date"]) + dvc.essential.directLabelingAdjust[column]['x']
+              var ycoord = y(graphic_data[graphic_data.length-1][column]) + dvc.essential.directLabelingAdjust[column]['y'];
+              return "translate(" + xcoord + "," + ycoord + ")";
+            })
+            .attr("x", 10)
+            .attr("dy", ".35em")
+            .attr("class", "label")
+            .style("fill", dvc.essential.colour_palette[column])
+            .text(column)
+            .call(wrap, margin.right)
+        } // end for loop running through data columns
+      } // end function createLineLabels()
+
+      function wrap(text, width) {
+        text.each(function() {
+          var text = d3.select(this),
+              words = text.text().split(/\s+/).reverse(),
+              word,
+              line = [],
+              lineNumber = 0,
+              lineHeight = 1.1, // ems
+              y = text.attr("y") +5,
+              dy = 0,
+              tspan = text.text(null).append("tspan").attr("x", 5).attr("y", y).attr("dy", dy + "em");
+          while (word = words.pop()) {
+            line.push(word);
+            tspan.text(line.join(" "));
+            if (tspan.node().getComputedTextLength() > width) {
+              line.pop();
+              tspan.text(line.join(" "));
+              line = [word];
+              tspan = text.append("tspan").attr("x", 5).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+            }
+          }
+        });
+      }
+
+			// css fix
+			d3.selectAll("path").attr("fill","none");
+
+			d3.selectAll("text").attr("font-family","'Open Sans', sans-serif");
+
+			d3.selectAll(".x text").attr("font-size","14px").attr("fill","#666");
+			d3.selectAll(".y text").attr("font-size","14px").attr("fill","#666");
+
+			d3.selectAll(".y line")
+					.attr("stroke","#CCC")
+					.attr("stroke-width","1px")
+					.style("shape-rendering","crispEdges");
+
+			d3.selectAll(".x line")
+				.attr("stroke","#CCC")
+				.attr("stroke-width","1px")
+				.style("shape-rendering","crispEdges");
+
+
+			// save SVG
+			d3.select("#buttonid").on("click",function(){saveSvgAsPng(document.getElementById("chart"), "diagram.png")});
+
+			//use pym to calculate chart dimensions
+		    if (pymChild) {
+		        pymChild.sendHeight();
+		    }
+
+	}  // ends draw graphic
+
+
+
+	//check whether browser can cope with svg
+		if (Modernizr.svg) {
+		   //load config
+			d3.json("config.json", function(error, config) {
+			dvc=config
+
+				//load chart data
+				d3.csv("data.csv", function(error, data) {
+					graphic_data = data;
+
+					graphic_data.forEach(function(d) {
+						d.date = d3.timeParse(dvc.essential.dateFormat)(d.date);
+
+					});
+					// load totals data
+
+
+
+					//use pym to create iframed chart dependent on specified variables
+					pymChild = new pym.Child({ renderCallback: drawGraphic});
+				});
+			})
+
+		} else {
+			 //use pym to create iframe containing fallback image (which is set as default)
+			 pymChild = new pym.Child();
+			if (pymChild) {
+		        pymChild.sendHeight();
+		    }
+		}
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+category,xcategory,ycategory,amount
+Proportion of businesses by trading status and proportion of workers on furlough leave and receiving pay top-ups,Businesses currently trading,Trading Status ,0.839
+Proportion of businesses by trading status and proportion of workers on furlough leave and receiving pay top-ups,Businesses currently trading,Proportion of workforce on furlough leave,0.107
+Proportion of businesses by trading status and proportion of workers on furlough leave and receiving pay top-ups,Businesses currently trading,Businesses providing top-ups on top of CJRS,0.405
+Proportion of businesses by trading status and proportion of workers on furlough leave and receiving pay top-ups,Businesses currently trading,Proportion of furloughed workforce receiving top-ups,0.672
+Proportion of businesses by trading status and proportion of workers on furlough leave and receiving pay top-ups,Businesses temporarily closed or paused trading ,Trading Status ,0.132
+Proportion of businesses by trading status and proportion of workers on furlough leave and receiving pay top-ups,Businesses temporarily closed or paused trading ,Proportion of workforce on furlough leave,0.706
+Proportion of businesses by trading status and proportion of workers on furlough leave and receiving pay top-ups,Businesses temporarily closed or paused trading ,Businesses providing top-ups on top of CJRS,0.448
+Proportion of businesses by trading status and proportion of workers on furlough leave and receiving pay top-ups,Businesses temporarily closed or paused trading ,Proportion of furloughed workforce receiving top-ups,0.371
+Proportion of businesses by trading status and proportion of workers on furlough leave and receiving pay top-ups,All businesses (excluding those permanently ceased trading),Trading Status ,0.971
+Proportion of businesses by trading status and proportion of workers on furlough leave and receiving pay top-ups,All businesses (excluding those permanently ceased trading),Proportion of workforce on furlough leave,0.111
+Proportion of businesses by trading status and proportion of workers on furlough leave and receiving pay top-ups,All businesses (excluding those permanently ceased trading),Businesses providing top-ups on top of CJRS,0.406
+Proportion of businesses by trading status and proportion of workers on furlough leave and receiving pay top-ups,All businesses (excluding those permanently ceased trading),Proportion of furloughed workforce receiving top-ups,0.668
+Cash reserves,Businesses currently trading,No cash reserves ,0.034
+Cash reserves,Businesses currently trading,Less than 6 months,0.392
+Cash reserves,Businesses currently trading,More than 6 months ,0.357
+Cash reserves,Businesses currently trading,Not sure,0.218
+Cash reserves,Businesses temporarily closed or paused trading ,No cash reserves ,0.134
+Cash reserves,Businesses temporarily closed or paused trading ,Less than 6 months,0.445
+Cash reserves,Businesses temporarily closed or paused trading ,More than 6 months ,0.189
+Cash reserves,Businesses temporarily closed or paused trading ,Not sure,0.232
+Cash reserves,All businesses (excluding those permanently ceased trading),No cash reserves ,0.037
+Cash reserves,All businesses (excluding those permanently ceased trading),Less than 6 months,0.393
+Cash reserves,All businesses (excluding those permanently ceased trading),More than 6 months ,0.352
+Cash reserves,All businesses (excluding those permanently ceased trading),Not sure,0.219
+Percentage of businesses applying to government schemes,Businesses currently trading,Coronavirus Job Retention Scheme,0.775
+Percentage of businesses applying to government schemes,Businesses currently trading,Government-backed accredited loans or finance agreements,0.224
+Percentage of businesses applying to government schemes,Businesses currently trading,Business grants funded by the UK and devolved governments,0.167
+Percentage of businesses applying to government schemes,Businesses currently trading,Not applied for any of these schemes,0.199
+Percentage of businesses applying to government schemes,Businesses temporarily closed or paused trading ,Coronavirus Job Retention Scheme,0.695
+Percentage of businesses applying to government schemes,Businesses temporarily closed or paused trading ,Government-backed accredited loans or finance agreements,0.213
+Percentage of businesses applying to government schemes,Businesses temporarily closed or paused trading ,Business grants funded by the UK and devolved governments,0.14
+Percentage of businesses applying to government schemes,Businesses temporarily closed or paused trading ,Not applied for any of these schemes,0.25
+Percentage of businesses applying to government schemes,All businesses (excluding those permanently ceased trading),Coronavirus Job Retention Scheme,0.773
+Percentage of businesses applying to government schemes,All businesses (excluding those permanently ceased trading),Government-backed accredited loans or finance agreements,0.224
+Percentage of businesses applying to government schemes,All businesses (excluding those permanently ceased trading),Business grants funded by the UK and devolved governments,0.166
+Percentage of businesses applying to government schemes,All businesses (excluding those permanently ceased trading),Not applied for any of these schemes,0.201
