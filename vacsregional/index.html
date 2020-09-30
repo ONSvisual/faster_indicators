@@ -7,13 +7,13 @@
 
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
     <link rel="stylesheet" href="../lib/globalStyle.css" />
     <link href="./css/chosen.css" rel="stylesheet" /> <!-- for chosen button -->
 
-    <style type="text/css">
+    <style >
       h6 {
          font-size: 16px;
          margin: 16px 0 8px 0;
@@ -148,7 +148,6 @@ label {
   border: 1px solid grey;
   box-sizing: border-box;
   cursor: pointer;
-  cursor: hand;
 }
 
 .sexbutton:hover{
@@ -176,10 +175,19 @@ label {
   border: 1px solid #1b5f97;
   box-sizing: border-box;
   cursor: pointer;
-  cursor: hand;
 
 }
 
+.visuallyhidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
 
     </style>
 
@@ -188,14 +196,15 @@ label {
 
 <body>
 
-
+<h5 class="visuallyhidden" >The East Midlands continued to see the strongest recovery in the volume of job adverts, whereas London saw the weakest recovery, with job adverts remaining below half of their 2019 average</h5>
 
 	<div id="inputform" style="clear: both;">
     <!--new select box-->
 
-   <legend>Select a region or country to compare with the all regions average</legend>
+   <p>Select a region or country to compare with the all regions average</p>
 
-    <div style="margin-bottom:15px; max-width300px;" >
+    <div style="margin-bottom:15px; " >
+        <label class="visuallyhidden" for="yearbox" > Choose an area</label>
         <select name="select" id= "yearbox" class="chosen-select">
           <option selected="" disabled="">Select a region or country</option>
 
@@ -213,42 +222,35 @@ label {
           <option value="London">London</option>
           <option value="SouthEast">South East</option>
           <option value="SouthWest">South West</option>
-
-
         <!--  <option value="2017">2017</option> -->
         </select>
     </div>
 
 
     </div>
+    <p aria-live="assertive" id="infohidden" class="visuallyhidden"></p>
 
-    <p style="margin-bottom:20px;">
+    <p aria-hidden="true" style="margin-bottom:20px;">
       <span style="font-weight:bold; font-size: 22px; color:#adadad;"> &#9473; </span> All regions &nbsp; &nbsp;
       <span style="font-weight:bold; font-size: 24px; color:#234D70;"> &#9473; </span> All regions average &nbsp; &nbsp;
       <span style="font-weight:bold; font-size: 22px; color:#D2376D;">&#9473; </span><span id="yourselectedcountry">Your selected region</span>
     </p>
 
-    <div id="graphic">
-
-    	<img src="fallback.png" alt="[Chart]" />
+    <div id="graphic" aria-hidden="true">
+      <img src="fallback.png" alt="The East Midlands continued to see the strongest recovery in the volume of job adverts, whereas London saw the weakest recovery, with job adverts remaining below half of their 2019 average" />
     </div>
 
     <h6 id="source"></h6>
 
-<!--   <div id="footer">
-     <h6>Download this chart</h6>
-     <a class="btn btn--primary" href="download.png" download>Image</a>
-     <a class="btn btn--primary" href="data.xlsx" target="_blank">.xls</a>
-     <a class="btn btn--primary" href="data.csv" target="_blank">.csv</a>
-   </div> -->
 
-   		<script src="https://cdn.ons.gov.uk/vendor/d3/4.2.7/d3.min.js" type="text/javascript"></script>
-   		<script src="../lib/modernizr.svg.min.js" type="text/javascript"></script>
-   		<script src="https://cdn.ons.gov.uk/vendor/pym/1.3.2/pym.min.js" type="text/javascript"></script>
-   		<script src="../lib/d3v4jetpack.js" type="text/javascript"></script>
-		  <script src="../lib/swoopy-drag-d3v4.js" type="text/javascript"></script>
-      <script src="../lib/saveSvgAsPng.js" type="text/javascript"></script>
-      <script src="https://cdn.ons.gov.uk/vendor/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+
+   		<script src="https://cdn.ons.gov.uk/vendor/d3/4.2.7/d3.min.js" ></script>
+   		<script src="../lib/modernizr.svg.min.js"></script>
+   		<script src="https://cdn.ons.gov.uk/vendor/pym/1.3.2/pym.min.js"></script>
+   		<script src="../lib/d3v4jetpack.js"></script>
+		  <script src="../lib/swoopy-drag-d3v4.js"></script>
+      <script src="../lib/saveSvgAsPng.js"></script>
+      <script src="https://cdn.ons.gov.uk/vendor/jquery/2.1.4/jquery.min.js"></script>
       <script src="../lib/chosen.jquery.js"></script>
       <script src="../lib/chosen.order.jquery.min.js"></script>
       <!-- <script src="../lib/footer.js"></script> -->
@@ -262,10 +264,15 @@ label {
       allow_single_deselect: true,
       disable_search: true
     })
-    // .on('change', function(e) {
-    //
-    //   selectedYear = $('#yearbox').val()
-    // });
+
+    d3.select(".chosen-drop").select("input").attr("id", "chosensearchinput")
+
+
+    d3.select(".chosen-drop").select("div.chosen-search")
+     .insert("label","input.chosen-search-input")
+     .attr("class", "visuallyhidden")
+     .attr("for", "chosensearchinput")
+     .html("Choose an area")
 
     var sexfilter = "A";
 
@@ -702,6 +709,7 @@ label {
 						//.attr("class",function(d,i){return "lines " + d.key})
 						.style("stroke","#e7e7e7") //function(d){ return dvc.essential.colour_palette[d.key]; })
 						//.attr("stroke",function(d,i){return "hsl(" + i*5 + ",40%,60%)"})
+
 						.style("stroke-width", 2)
 						.style("stroke-linecap", 'round')
 						.style("stroke-linejoin", 'round')
@@ -715,6 +723,14 @@ label {
 			        .enter()
 			        .append('path')
 			        .attr('class',function(d,i){return d.key.charAt(0) + 'frontlines frontlines frontlines' +d.key + " " +d.key})
+              .attr("data-last", function(d){
+                //console.log(d.value[d.value.length-1].amt)
+                return d.value[d.value.length-1].amt
+              })
+              .attr("data-date", function(d){
+                //console.log(d3.timeFormat("%d %B %Y")(d.value[d.value.length-1].date))
+                return d3.timeFormat("%d %B %Y")(d.value[d.value.length-1].date)
+              })
 						.style("stroke","#D2376D")
 						.style("fill", 'none')
 						.style("opacity",0)
@@ -793,7 +809,24 @@ label {
 					revealline(useryear);
 				})
 
+        d3.select(".chosen-drop").on("keyup", function() {
+           if(d3.event.keyCode === 13 || d3.event.keyCode === 32){
+              // setTimeout(function(){
+                 useryear = sexfilter + d3.select("#yearbox").property("value");
+                 //d3.select("#yourselectedcountry").text(useryear.substr(1))
+                //marriagestotal(useryear);
 
+                //get last object in array
+                finalobject = graphic_data.length;
+                //creat data of just that last object
+                showthisvalue1 = graphic_data[finalobject-1];
+                //now get user's year
+                showthisvalue2 = showthisvalue1[useryear];
+
+                revealline(useryear);
+              // }, 100);
+           }
+         })
 
 				function hoverreveal(hoverline){
 
@@ -832,6 +865,11 @@ label {
 						.duration(1000)
 						.style("opacity",1)
 
+          current_value = d3.select("." + useryear).node().getAttribute("data-last")
+          current_year = d3.select("." + useryear).node().getAttribute("data-date")
+          current_area = useryear
+
+          d3.select("#infohidden").text("On "+current_year+" in "+useryear.substring(1)+" the most recent index value was " + current_value+". The index is based on the 2019 average for the UK being equal to 100.")
 				}
 
 				//pull in totals
