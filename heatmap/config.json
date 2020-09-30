@@ -2,6 +2,7 @@
     "essential" : {
             "graphic_data_url": ["data_mobile.csv", "data_desktop.csv"],
             "sourceText":["Faster indicators, Office for National Statistics"],
+            "hidden_accessible_summary":"Provide a summary of what the chart shows here (can be taken from the chart title in the tracker) e.g For a third consecutive month, more firms reported increasing turnover between June and July 2020, than decreasing turnover, using the latest seasonally adjusted monthly all industry VAT business turnover returns",
             "varcolour": ["#fff","#660000","#990000","#c76152","#e7aba4","#f7f7f7","#99bfc0","#4e858a","#004e57"],
 			      "direction":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
             "section": [5,5,5,5,1],
