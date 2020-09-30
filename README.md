@@ -5,5 +5,5 @@ Collection of charts used in weekly faster indicators releases
 - [BICS ](https://onsvisual.github.io/faster_indicators/bics/)
 - [Heatmap](https://onsvisual.github.io/faster_indicators/heatmap/)
 - [Transport](https://onsvisual.github.io/faster_indicators/transport/)
-- [Vacs](https://onsvisual.github.io/faster_indicators/vacs/)
-- [Vacs Regional](https://onsvisual.github.io/faster_indicators/vacsregional/)
+- [Job vacancies](https://onsvisual.github.io/faster_indicators/vacs/)
+- [Regional Job vacancies](https://onsvisual.github.io/faster_indicators/vacsregional/)
